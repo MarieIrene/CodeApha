@@ -1,0 +1,16 @@
+h1{
+    background-color: aquamarine;
+    color:brown;
+    text-align: center;
+    margin: 50px 335px;
+    font-weight: bold;
+    
+}
+.bordered{
+    border:2px solid black;
+    margin: 80px 400px;
+    padding: 10px 50px 40px 50px;
+    font-size: 30px;
+    font-weight:bold;
+    background-color: rgba(184, 135, 11, 0.703);
+}

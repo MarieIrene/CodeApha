@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="task.css">
+    </head>
+        <title>CALCULATOR</title>
+        <body>
+            <h1>AGE CALCULATOR</h1>
+            <div class="bordered">
+            <form>  
+                <label for="fname">Firstname:</label><input type="text" id="fname" name="fname" style="width:140px"><br>
+                <label for="lname">Lastname:</label><input type="text" id="lname" name="lname" style="width:140px"><br>
+                <label for="Dob">Date of Birth:</label><input type="text" id="Dob" name="Dob" style="width:140px"><br>
+                <label for="month">Month:</label>
+                <select id="mon" name="month">
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="march">March</option>
+                    <option value="april">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="october">October</option>
+                    <option value="november">November</option>
+                    <option value="december">December</option>
+                </select><br>
+
+                <label for="year">Year:</label><input type="text" id="year" name="year" style="width:90px"><br><br>
+                <button type="button" onclick="calculateAge()" style="height: 40px; width: 130px; background-color: aquamarine;">Calculate Age</button><br><br><br>
+                <p id="result"></p>
+                <label for ="age">Age:</label><input type="text" id="age" name="age"style="width:90px">
+                <script>
+                    function calculateAge(){
+                        const birthyear=document.getElementById("year").value;
+                        if (!birthyear){
+                            document.getElementById("result").innerText="please enter a valid year";
+                            return;
+                        }
+                        const currentYear=new Date().getFullYear();
+                        const yourAge=currentYear-birthyear;
+                        if(yourAge<0){
+                            document.getElementById("result").innerText="The entered year is in future";
+                            return;
+                        }
+                        document.getElementById("age").value=`${yourAge}`;
+                        
+                    }
+                </script>
+               
+            </form>
+        </div>
+        
+        </body>
+     
+</html>
